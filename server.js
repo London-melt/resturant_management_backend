@@ -7,7 +7,6 @@
 
 var express = require('express');
 var bodyparser = require('body-parser');
-
 var db_tools = require('./tools/db_tools');
 
 var app = express();
@@ -23,7 +22,7 @@ db_tools.DBConnectMongoose()
         app.use(bodyparser.json({limit: '10mb'}));
 
         routes.assignRoutes(app);
-
+        // user.User
         app.listen(3000);
 
         console.log('Server listening on port 3000');

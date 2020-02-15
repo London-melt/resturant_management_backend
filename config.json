@@ -1,7 +1,7 @@
 {
   "db_config" : {
     "host": "localhost",
-    "port": 27017,
+    "port": 32768,
     "name": "test"
   }
 }

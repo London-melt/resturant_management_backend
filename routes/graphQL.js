@@ -4,7 +4,7 @@
 var graphql = require('graphql');
 var GraphQLString = require('graphql').GraphQLString;
 
-var groupsDomain = require('../domain/groups');
+var groupsDomain = require('../domain/user-management/groups');
 
 const queryType = new graphql.GraphQLObjectType({
     name: 'Query',

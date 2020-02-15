@@ -3,8 +3,9 @@
  */
 'use strict'
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 var config = require('../config.json');
+var mongoose = require('mongoose');
 
 var db;
 
@@ -13,10 +14,10 @@ exports.DBConnectMongoose = function() {
         mongoose.Promise = global.Promise;
 
         if (db) {
+            console.log(db)
             return resolve(db);
         }
 
-        // database connect
         mongoose.connect('mongodb://' + config.db_config.host + ":" + config.db_config.port + "/" + config.db_config.name)
             .then(() => {
                 db = mongoose.connection
